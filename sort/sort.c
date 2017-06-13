@@ -9,20 +9,20 @@
 #include "sort.h"
 int main()
 {
-    int a[10],n,i,j,t;
+    int a[10],i,j,t;
     for(i=0;i<=9;i++)
     {
-        scanf("%d",a[i]);
+        scanf("%d",&a[i]);
     }
     for(i=0;i<10;i++)
     {
-        for(j=0;j<10-1-i;j++)
+        for(j=1;j<10-i;j++)
         {
-            if(a[i]>a[i+1])
+            if(a[i]>a[i+j])
             {
                 t=a[i];
-                a[i]=a[i+1];
-                a[i+1]=t;
+                a[i]=a[i+j];
+                a[i+j]=t;
             }
         }
     }
